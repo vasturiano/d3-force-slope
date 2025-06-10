@@ -1,0 +1,33 @@
+<head>
+  <style> body { margin: 0 } </style>
+
+<!--  <script src="../dist/d3-force-slope.js"></script>-->
+<!--  <script>forceSlope = d3.forceSlope</script>-->
+</head>
+
+<body>
+  <div id="graph"></div>
+  <script type="module">
+    import forceSlope from 'https://esm.sh/d3-force-slope';
+    import ForceGraph from 'https://esm.sh/force-graph';
+
+    // Random tree
+    const N = 300;
+    const gData = {
+      nodes: [...Array(N).keys()].map(i => ({ id: i })),
+      links: [...Array(N).keys()]
+        .filter(id => id)
+        .map(id => ({
+          source: id,
+          target: Math.round(Math.random() * (id-1))
+        }))
+    };
+
+    new ForceGraph()
+      (document.getElementById('graph'))
+      .graphData(gData)
+      .d3Force('slope', forceSlope(gData.links)
+        .id(node => node.id)
+      );
+  </script>
+</body>
