@@ -1,7 +1,7 @@
 {
   "name": "d3-force-slope",
   "version": "0.1.0",
-  "description": "A D3 force plugin that limits the link slopes to a discrete set of options.",
+  "description": "A D3 force plugin that quantizes link slopes to fixed angles for cleaner graph alignment.",
   "keywords": [
     "d3",
     "d3-module",
