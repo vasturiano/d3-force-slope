@@ -1,0 +1,1 @@
+export { default as forceSlope } from './slope.js';

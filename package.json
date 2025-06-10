@@ -1,0 +1,58 @@
+{
+  "name": "d3-force-slope",
+  "version": "0.1.0",
+  "description": "A D3 force plugin that limits the link slopes to a discrete set of options.",
+  "keywords": [
+    "d3",
+    "d3-module",
+    "d3-force",
+    "slope",
+    "link-slopes",
+    "physics",
+    "layout",
+    "graph",
+    "force",
+    "simulation"
+  ],
+  "homepage": "https://github.com/vasturiano/d3-force-slope",
+  "license": "MIT",
+  "author": {
+    "name": "Vasco Asturiano",
+    "url": "https://github.com/vasturiano"
+  },
+  "type": "module",
+  "jsdelivr": "dist/d3-force-slope.min.js",
+  "unpkg": "dist/d3-force-slope.min.js",
+  "main": "dist/d3-force-slope.mjs",
+  "module": "dist/d3-force-slope.mjs",
+  "exports": {
+    "umd": "./dist/d3-force-slope.min.js",
+    "default": "./dist/d3-force-slope.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasturiano/d3-force-slope.git"
+  },
+  "scripts": {
+    "build": "rimraf dist && rollup -c",
+    "dev": "rollup -w -c",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.42.0"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
